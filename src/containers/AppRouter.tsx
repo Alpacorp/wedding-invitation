@@ -5,6 +5,7 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/?utm_source" element={<Home />} />
       <Route path="/:username" element={<Home />} />
       <Route path="/*" element={<Home />} />
     </Routes>

@@ -1,7 +1,14 @@
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export const Names = () => {
-  const { username } = useParams();
+  const location = useLocation();
+  const userName = new URLSearchParams(location.search).get("user_name");
 
-  return <div>{username}</div>;
+  console.log("userName", userName);
+
+  return (
+    <>
+      <div>{userName}</div>
+    </>
+  );
 };
