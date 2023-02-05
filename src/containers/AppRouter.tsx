@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 
-import { Home } from "../pages/home";
-import { Splash } from "../pages/splash";
+import { HomePage } from "../pages/home";
+import { IntroPage } from "../pages/intro";
 
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/*" element={<Home />} />
-      <Route path="/" element={<Splash />} />
+      <Route path="/*" element={<HomePage />} />
+      <Route path="/" element={<IntroPage />} />
     </Routes>
   );
 };

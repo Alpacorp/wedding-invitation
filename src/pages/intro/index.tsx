@@ -5,7 +5,7 @@ import { Image } from "../../components/Image";
 import { Names } from "../../components/Names";
 import { VideoIntro } from "../../components/VideoIntro/VideoIntro";
 
-export const Splash: FC = () => {
+export const IntroPage: FC = () => {
   return (
     <section>
       <section>
