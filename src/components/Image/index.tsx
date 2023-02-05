@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import { aya } from "../../assets/imgs";
 
 import "./styles.css";

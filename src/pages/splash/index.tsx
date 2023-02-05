@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import { Cta } from "../../components/Cta";
 import { Image } from "../../components/Image";
 import { Names } from "../../components/Names";

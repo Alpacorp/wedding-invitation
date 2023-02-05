@@ -5,14 +5,12 @@ interface DataContextProps {
 }
 
 const DataContext = createContext({
-  data: [],
+  data: {} as any,
   setData: (data: any) => {},
 });
 
 export const DataContextProvider = ({ children }: DataContextProps) => {
-  const [data, setData] = useState([]);
-
-  console.log("data context", data);
+  const [data, setData] = useState({});
 
   return (
     <DataContext.Provider value={{ data, setData }}>
