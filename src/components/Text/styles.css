@@ -1,0 +1,16 @@
+.text {
+  text-align: center;
+  color: #CD986E;
+  font-size: 22px;
+  max-width: 280px;
+  margin: auto;
+  width: 100%;
+}
+
+.text .title, .text .description {
+  margin: 0
+}
+
+.text .title {
+  font-weight: bold;
+}

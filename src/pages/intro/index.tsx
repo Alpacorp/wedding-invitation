@@ -3,22 +3,20 @@ import { FC } from "react";
 import { Cta } from "../../components/Cta";
 import { Image } from "../../components/Image";
 import { Names } from "../../components/Names";
+import { Text } from "../../components/Text";
 import { VideoIntro } from "../../components/VideoIntro/VideoIntro";
+
+import "./styles.css";
+import "../styles-pages.css";
 
 export const IntroPage: FC = () => {
   return (
-    <section>
-      <section>
-        <div>
-          <h1>Nos casaremos</h1>
-          <p>Queremos que nos acompañes en este gran día</p>
-        </div>
-        <p>Hola:</p>
-        <Names />
-        <VideoIntro />
-        <Image size="medium" />
-        <Cta route="/invitacion" text="Continuar" />
-      </section>
+    <section className="container intro">
+      <Text />
+      <Names />
+      <VideoIntro />
+      <Image size="small" />
+      <Cta route="/invitacion" text="Continuar" />
     </section>
   );
 };

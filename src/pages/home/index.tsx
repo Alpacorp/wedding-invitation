@@ -6,7 +6,7 @@ import { Names } from "../../components/Names";
 export const HomePage: FC = () => {
   return (
     <div>
-      <Names showText={true} />
+      <Names showText={true} greetingText={false} />
       <Image size="medium" />
     </div>
   );
