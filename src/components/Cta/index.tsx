@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
+import "./styles.css";
+
 export interface CtaProps {
   route: string;
   text: string;

@@ -5,11 +5,12 @@ import DataContext from "../../context/dataContext";
 
 export interface NamesProps {
   showText?: boolean;
+  greetingText?: boolean;
   textPeople?: string;
   count?: number;
 }
 
-export const Names: FC<NamesProps> = ({ showText }) => {
+export const Names: FC<NamesProps> = ({ showText, greetingText }) => {
   const { data, setData } = useContext(DataContext);
 
   const location: Location = useLocation();
@@ -48,6 +49,7 @@ export const Names: FC<NamesProps> = ({ showText }) => {
 
   return (
     <section>
+      {greetingText && <p>Hola:</p>}
       <h2> {data?.guests}</h2>
       {showText && (
         <p>
