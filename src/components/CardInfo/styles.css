@@ -1,0 +1,55 @@
+.card-info {
+  text-align: center;
+}
+
+.card-info > p {
+  color: #fff;
+  font-size: 12px;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card-info .header, .card-info .loc {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: baseline;
+  margin: 5px 0;
+}
+
+.card-info .loc {
+  color: #fff;
+}
+
+.card-info .hour {
+  font-size: 15px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.card-info .location {
+  font-size: 15px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header .title {
+  text-transform: uppercase;
+  color: #E9F1DC;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-info .icon {
+  width: 23px;
+  height: 23px;
+  margin-right: 10px;
+}
+
+.card-info .description {
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+}

@@ -1,0 +1,4 @@
+.guests .division {
+  aspect-ratio: attr(width) / attr(height);
+  margin: 5px;
+}

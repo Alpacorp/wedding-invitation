@@ -3,6 +3,8 @@ import { Location, useLocation } from "react-router-dom";
 
 import DataContext from "../../context/dataContext";
 
+import { Division } from "../Division";
+
 import { arandela } from "../../assets/imgs";
 
 import "./styles.css";
@@ -56,19 +58,13 @@ export const Guests: FC<NamesProps> = ({ showText, greetingText, light }) => {
     <section className={`guests ${light ? "light" : ""}`}>
       {greetingText && <p className="greeting">Hola:</p>}
       <h2 className="names"> {data?.guests}</h2>
+      <Division src={arandela} alt="división" />
       {showText && (
         <p className="aditional-text">
-          Invitación válida para {data?.quantity}
+          *Invitación válida para {data?.quantity}
           {data?.quantity === 1 ? " persona" : " personas"}
         </p>
       )}
-      <img
-        className="division"
-        width={280}
-        height={16}
-        src={arandela}
-        alt="división"
-      />
     </section>
   );
 };

@@ -1,0 +1,10 @@
+.waiting {
+  font-family: 'Clicker Regular', sans-serif;
+  margin: 10px 0;
+}
+
+.waiting h2 {
+  font-size: 40px;
+  color: #E9F1DC;
+  font-weight: 500;
+}

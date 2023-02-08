@@ -8,6 +8,7 @@
   font-size: 15px;
   margin: 10px 0 0 0;
   color: #40615A;
+  text-align: center;
 }
 
 .guests .greeting {
@@ -15,15 +16,16 @@
 }
 
 .guests .names {
-  font-family: 'Quicksand Bold', sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   text-transform: uppercase;
-  height: 17px;
+  height: auto;
+  aspect-ratio: auto;
 }
 
-.guests .division {
-  aspect-ratio: attr(width) / attr(height);
-  margin: 5px;
+.guests .aditional-text {
+  font-size: 15px;
+  text-transform: none;
+  margin-top: -10px;
 }
 
 .light {

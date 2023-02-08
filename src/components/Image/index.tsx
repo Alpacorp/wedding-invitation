@@ -1,17 +1,16 @@
 import { FC } from "react";
 
-import { aya } from "../../assets/imgs";
-
 import "./styles.css";
 
-export interface ImageProps {
-  size: "small" | "medium" | "large";
+interface ImageProps {
+  src: string;
+  alt: string;
 }
 
-export const Image: FC<ImageProps> = ({ size }) => {
+export const Image: FC<ImageProps> = ({ src, alt }) => {
   return (
-    <figure className={`logo ${size}`}>
-      <img src={aya} alt="Alix & Alex, logo del matrimonio" />
+    <figure className="image">
+      <img src={src} alt={alt} />;
     </figure>
   );
 };

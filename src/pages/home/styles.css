@@ -1,7 +1,31 @@
 .home {
   background-image: url("../../assets/imgs/bg-home.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   background-size: cover;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .header-page {
+  margin: 25px 0 0 0;
+}
+
+.home .logo {
+  margin: 45px 0 0 0;
+}
+
+.home .schedule {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.home .cards {
+  margin: 40px 0 0 0;
+}
+
+.home .confirm {
+  margin: 0 0 20px 0;
 }

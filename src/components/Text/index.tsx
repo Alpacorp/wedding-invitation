@@ -1,10 +1,17 @@
+import { FC } from "react";
+
 import "./styles.css";
 
-export const Text = () => {
+interface TextProps {
+  title?: string;
+  description?: string;
+}
+
+export const Text: FC<TextProps> = ({ title, description }) => {
   return (
     <section className="text">
-      <h1 className="title">¡Nos casamos!</h1>
-      <p className="description">Queremos que nos acompañes en este gran día</p>
+      <h2 className="title">{title}</h2>
+      <p className="description">{description}</p>
     </section>
   );
 };

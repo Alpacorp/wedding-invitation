@@ -1,19 +1,9 @@
-.small {
-  width: 180px;
-  height: auto;
-  aspect-ratio: 16/9;
-}
-
-.medium {
-  width: 300px;
-  aspect-ratio: 16/9;
-}
-
-.large {
-  width: 500px;
-  aspect-ratio: 16/9;
-}
-
-.logo {
+.image {
   margin: 10px 0;
+}
+
+.image img {
+  width: 250px;
+  height: auto;
+  aspect-ratio: auto 1/1;
 }
