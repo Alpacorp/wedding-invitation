@@ -2,7 +2,7 @@
   text-align: center;
   color: #CD986E;
   font-size: 22px;
-  max-width: 280px;
+  max-width: 250px;
   width: 100%;
 }
 
@@ -12,11 +12,13 @@
 
 .text .title {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
+  text-transform: uppercase;
 }
 
 .text .description {
   font-size: 18px;
+  letter-spacing: .5px;
 }
 
 @media screen and (max-height: 500px) {
