@@ -48,12 +48,15 @@ export const HomePage: FC = () => {
           division
         />
         <CardInfo title="Traje Formal" src={dress} division>
-          <p>Mujeres: Vestido Largo</p>
-          <p>Hombre: Vestido Gala</p>
-          <br />
-          <p>Recomendaciones:</p>
-          <p>• Evita el uso del color verde.</p>
-          <p>• Calzado: puedes usar tenis blancos para tu comodidad.</p>
+          <div className="people">
+            <p>Mujeres: Vestido Largo</p>
+            <p>Hombre: Vestido Gala</p>
+          </div>
+          <div className="requirements">
+            <p>Recomendaciones:</p>
+            <p>• Evita el uso del color verde.</p>
+            <p>• Calzado: puedes usar tenis blancos para tu comodidad.</p>
+          </div>
         </CardInfo>
         <CardInfo title="Lluvia de Sobres" src={mail} />
       </div>

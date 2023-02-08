@@ -13,3 +13,9 @@
   position: absolute;
   z-index: 2;
 }
+
+@media screen and (max-width: 320px) {
+  .photo img {
+    width: 230px;
+  }
+}

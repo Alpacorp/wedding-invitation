@@ -23,9 +23,19 @@
 }
 
 .home .cards {
-  margin: 10px 0 0 0;
+  margin: 25px 0 0 0;
 }
 
 .home .confirm {
   margin: 0 0 20px 0;
+}
+
+@media screen and (max-width: 320px) {
+  .home .schedule {
+    margin: 0;
+  }
+
+  .home .cards {
+    margin: 0;
+  }
 }

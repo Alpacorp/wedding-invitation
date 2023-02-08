@@ -18,8 +18,9 @@
 }
 
 .text .description {
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: .5px;
+  font-weight: 600;
 }
 
 @media screen and (max-height: 500px) {
