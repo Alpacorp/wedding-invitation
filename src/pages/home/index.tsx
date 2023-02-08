@@ -6,13 +6,13 @@ import { Photo } from "../../components/Photo";
 import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { CardInfo } from "../../components/CardInfo";
+import { Cta } from "../../components/Cta/index";
+import { Italics } from "../../components/Italics";
 
 import { church, cups, date, dress, mail } from "../../assets/imgs";
 
 import "./styles.css";
 import "../pages-styles.css";
-import { Cta } from "../../components/Cta/index";
-import { Waiting } from "../../components/Waiting";
 
 export const HomePage: FC = () => {
   return (
@@ -60,7 +60,7 @@ export const HomePage: FC = () => {
         </CardInfo>
         <CardInfo title="Lluvia de Sobres" src={mail} />
       </div>
-      <Waiting text="Te esperamos" />
+      <Italics text="Te esperamos" />
       <div className="confirm">
         <Cta route="/gracias" text="Confirmar asistencia" />
       </div>

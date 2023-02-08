@@ -7,6 +7,10 @@
   margin: 0 auto;
 }
 
+.green {
+  color: #40615A !important;
+}
+
 .text .title, .text .description {
   margin: 0
 }
