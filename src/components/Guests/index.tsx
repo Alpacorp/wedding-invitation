@@ -62,7 +62,13 @@ export const Guests: FC<NamesProps> = ({ showText, greetingText, light }) => {
           {data?.quantity === 1 ? " persona" : " personas"}
         </p>
       )}
-      <img src={arandela} alt="división" />
+      <img
+        className="division"
+        width={800}
+        height={16}
+        src={arandela}
+        alt="división"
+      />
     </section>
   );
 };

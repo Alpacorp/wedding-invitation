@@ -18,6 +18,11 @@
   font-family: 'Quicksand Bold', sans-serif;
   font-size: 15px;
   text-transform: uppercase;
+  height: 17px;
+}
+
+.guests .division {
+  aspect-ratio: attr(width) / attr(height);
 }
 
 .light {
