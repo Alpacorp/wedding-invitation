@@ -11,7 +11,9 @@ export interface CtaProps {
 export const Cta: FC<CtaProps> = ({ route, text }) => {
   return (
     <div className="cta">
-      <Link to={route}>{text}</Link>
+      <Link className="link" to={route}>
+        {text}
+      </Link>
     </div>
   );
 };

@@ -1,21 +1,22 @@
 .cta {
-  margin: 5px 0;
-  background-color: #073128;
   text-align: center;
-  padding: 5px 10px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  margin: 5px 0;
+}
+
+.cta .link {
+  background-color: #073128;
+  padding: 5px 20px;
   border: #fff 1px solid;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.cta:hover {
-  transform: scale(1.1);
-}
-
-.cta a {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 15px;
+}
+
+.cta:hover {
+  transform: scale(1.1);
 }
