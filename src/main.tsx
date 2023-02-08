@@ -6,7 +6,7 @@ import { AppRouter } from "./containers/AppRouter";
 
 import { DataContextProvider } from "./context/dataContext";
 
-import "./index.css";
+import "./global-styles.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

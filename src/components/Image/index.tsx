@@ -5,7 +5,7 @@ import { aya } from "../../assets/imgs";
 import "./styles.css";
 
 export interface ImageProps {
-  size: string;
+  size: "small" | "medium" | "large";
 }
 
 export const Image: FC<ImageProps> = ({ size }) => {

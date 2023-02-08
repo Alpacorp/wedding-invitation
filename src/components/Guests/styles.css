@@ -1,0 +1,26 @@
+.guests {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 15px;
+  margin: 10px auto;
+  color: #40615A;
+}
+
+.guests .greeting {
+  margin: 0;
+}
+
+.guests .names {
+  font-family: 'Quicksand Bold', sans-serif;
+  margin: 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
+.light {
+  color: #fff;
+}

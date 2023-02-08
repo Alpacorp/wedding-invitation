@@ -13,4 +13,16 @@
 
 .text .title {
   font-weight: bold;
+  font-size: 28px;
+}
+
+.text .description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+@media screen and (max-height: 500px) {
+  .text .title {
+    font-size: 20px;
+  }
 }

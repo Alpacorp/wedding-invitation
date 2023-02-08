@@ -1,12 +1,12 @@
 import { FC } from "react";
 
 import { Image } from "../../components/Image";
-import { Names } from "../../components/Names";
+import { Guests } from "../../components/Guests";
 
 export const HomePage: FC = () => {
   return (
     <div>
-      <Names showText={true} greetingText={false} />
+      <Guests showText={true} greetingText={false} />
       <Image size="medium" />
     </div>
   );
