@@ -12,10 +12,8 @@ import "../styles-pages.css";
 export const IntroPage: FC = () => {
   return (
     <section className="container intro">
-      <div className="top">
-        <Text />
-        <Guests />
-      </div>
+      <Text />
+      <Guests />
       <VideoIntro />
       <div className="bottom">
         <Image size="small" />
