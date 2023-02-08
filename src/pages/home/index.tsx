@@ -3,11 +3,14 @@ import { FC } from "react";
 import { Image } from "../../components/Image";
 import { Guests } from "../../components/Guests";
 
+import "./styles.css";
+import "../styles-pages.css";
+
 export const HomePage: FC = () => {
   return (
-    <div>
-      <Guests showText={true} greetingText={false} />
-      <Image size="medium" />
-    </div>
+    <section className="container home">
+      <Guests showText greetingText={false} light />
+      <Image size="small" />
+    </section>
   );
 };
