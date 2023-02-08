@@ -1,46 +1,15 @@
-@font-face {
-  font-family: 'Quicksand Bold';
-  src: url(./assets/fonts/Quicksand-Bold.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'Quicksand Light';
-  src: url(./assets/fonts/Quicksand-Light.woff2) format('woff2'),
-}
-
-@font-face {
-  font-family: 'Quicksand Medium';
-  src: url(./assets/fonts/Quicksand-Medium.woff2) format('woff2'),
-}
-
-@font-face {
-  font-family: 'Quicksand Regular';
-  src: url(./assets/fonts/Quicksand-Regular.woff2) format('woff2'),
-}
-
-@font-face {
-  font-family: 'Quicksand SemiBold';
-  src: url(./assets/fonts/Quicksand-SemiBold.woff2) format('woff2'),
-}
-
-@font-face {
-  font-family: 'Clicker Regular';
-  src: url(./assets/fonts/ClickerScript-Regular.woff2) format('woff2');
-}
-
 * {
   margin: 0;
   padding: 0;
 }
 
 html {
-  /* background-color: #40615A; */
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Quicksand Regular', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   max-width: 400px;
   margin: auto;
   background-color: #CD986E;
