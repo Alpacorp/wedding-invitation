@@ -4,7 +4,7 @@ import { Image } from "../../components/Image";
 import { Guests } from "../../components/Guests";
 
 import "./styles.css";
-import "../styles-pages.css";
+import "../pages-styles.css";
 
 export const HomePage: FC = () => {
   return (

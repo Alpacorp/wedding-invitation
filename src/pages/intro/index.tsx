@@ -7,7 +7,7 @@ import { Text } from "../../components/Text";
 import { VideoIntro } from "../../components/VideoIntro/VideoIntro";
 
 import "./styles.css";
-import "../styles-pages.css";
+import "../pages-styles.css";
 
 export const IntroPage: FC = () => {
   return (
@@ -15,10 +15,8 @@ export const IntroPage: FC = () => {
       <Text />
       <Guests />
       <VideoIntro />
-      <div className="bottom">
-        <Image size="small" />
-        <Cta route="/invitacion" text="Continuar" />
-      </div>
+      <Image size="small" />
+      <Cta route="/invitacion" text="Continuar" />
     </section>
   );
 };

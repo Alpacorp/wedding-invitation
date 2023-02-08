@@ -64,7 +64,7 @@ export const Guests: FC<NamesProps> = ({ showText, greetingText, light }) => {
       )}
       <img
         className="division"
-        width={800}
+        width={280}
         height={16}
         src={arandela}
         alt="división"
