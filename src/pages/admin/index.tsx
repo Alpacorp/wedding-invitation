@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { transformText } from "../../utils/transformText";
 
+import "./styles.css";
+import "../pages-styles.css";
+
 export const Admin = () => {
   const environment: string = import.meta.env.VITE_ENV;
   const local: string = import.meta.env.VITE_LOCAL_URL;
@@ -18,6 +21,10 @@ export const Admin = () => {
     } else {
       setBaseUrl(prod);
     }
+  };
+
+  const handleCleanUrl = () => {
+    setUrl("");
   };
 
   const [formValues, handleInputChange, reset] = useForm({
@@ -38,32 +45,69 @@ export const Admin = () => {
   }, []);
 
   return (
-    <section>
-      <form onSubmit={handleSubmit}>
-        <input
-          name="guests"
-          id="guests"
-          type="text"
-          placeholder="Invitados"
-          onChange={handleInputChange}
-          value={transformText(guests)}
-        />
-        <input
-          name="quantity"
-          id="quantity"
-          type="number"
-          placeholder="Cantidad"
-          onChange={handleInputChange}
-          value={quantity}
-        />
-        <input type="submit" />
-      </form>
-
-      {url && (
-        <Link to={url} target="_blank">
-          {url}
-        </Link>
-      )}
+    <section className="container admin">
+      <div className="admin-form">
+        <h2>Formulario de registro de invitados</h2>
+        <hr />
+        <p>
+          El <strong>propósito es registrar</strong> la información que verán
+          los invitados en cada una de sus invitaciones.
+        </p>
+        <p>
+          Una vez hayas registrado la información, se{" "}
+          <strong>generará una url</strong> que podrás compartir el o los
+          invitados.
+        </p>
+        <hr />
+        <form onSubmit={handleSubmit}>
+          <div className="inputs">
+            <input
+              name="guests"
+              id="guests"
+              type="text"
+              placeholder="Información de invitados"
+              aria-label="Información de invitados"
+              onChange={handleInputChange}
+              value={transformText(guests)}
+              required
+            />
+            <input
+              name="quantity"
+              id="quantity"
+              type="number"
+              placeholder="Cantidad de invitados"
+              aria-label="Cantidad de invitados"
+              onChange={handleInputChange}
+              value={quantity}
+              required
+            />
+          </div>
+          <div className="buttons">
+            <button type="submit" title="Enviar" aria-label="Crear url">
+              Crear url
+            </button>
+            <button
+              type="reset"
+              title="Borrar url"
+              onClick={handleCleanUrl}
+              aria-label="Borrar url"
+            >
+              Borrar url
+            </button>
+          </div>
+        </form>
+      </div>
+      <div className="result">
+        {url && (
+          <Link
+            to={url}
+            target="_blank"
+            title="Haz click para ver la invitación personalizada"
+          >
+            {url}
+          </Link>
+        )}
+      </div>
     </section>
   );
 };
