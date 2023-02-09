@@ -10,7 +10,7 @@ interface ImageProps {
 export const Image: FC<ImageProps> = ({ src, alt }) => {
   return (
     <figure className="image">
-      <img src={src} alt={alt} />;
+      <img src={src} alt={alt} />
     </figure>
   );
 };

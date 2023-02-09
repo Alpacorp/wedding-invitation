@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.header .title {
+  text-transform: uppercase;
+  color: #E9F1DC;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .card-info .people, .card-info .requirements {
   text-align: center;
   max-width: 200px;
@@ -35,15 +42,7 @@
 .card-info .location {
   font-size: 15px;
   margin-left: 5px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.header .title {
-  text-transform: uppercase;
-  color: #E9F1DC;
-  font-size: 18px;
-  font-weight: 500;
+  /* color: #fff; */
 }
 
 .card-info .icon {
@@ -56,4 +55,20 @@
   color: #fff;
   font-size: 15px;
   margin: 0;
+}
+
+.card-info .button-location {
+  text-align: center;
+  margin: 0 auto;
+  width: 100px;
+  height: 25px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-info .button-location a img {
+  transition: all 0.2s ease-in-out;
+}
+
+.card-info .button-location a img:hover {
+  transform: scale(1.05);
 }

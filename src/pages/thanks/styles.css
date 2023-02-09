@@ -36,7 +36,10 @@
 
 .thanks .images .likes {
   display: flex;
-  justify-content: space-around;
+}
+
+.thanks .images .likes figure {
+  margin: 0 3px;
 }
 
 .thanks .message h2 {

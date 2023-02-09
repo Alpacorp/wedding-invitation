@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Division } from "../Division";
 
-import { arandelaVerde } from "../../assets/imgs";
+import { arandelaVerde, locationButton } from "../../assets/imgs";
 
 import "./styles.css";
 
@@ -41,12 +41,21 @@ export const CardInfo: FC<CardInfoProps> = ({
           <>
             <p className="hour">{hour}</p>
             {"•"}
-            <a className="location" href={link} target="_blank">
-              {location}
-            </a>
+            <p className="location">{location}</p>
           </>
         )}
       </div>
+      {location && (
+        <div className="button-location">
+          <a href={link} target="_blank">
+            <img
+              src={locationButton}
+              alt="Ver ubicación"
+              title="Ver ubicación"
+            />
+          </a>
+        </div>
+      )}
       {children}
       {division && <Division src={arandelaVerde} alt="división" />}
     </section>

@@ -10,6 +10,7 @@ import { Image } from "../../components/Image";
 import "./styles.css";
 import "../pages-styles.css";
 import { heart, leftLike, rightLike } from "../../assets/imgs";
+import { Cta } from "../../components/Cta";
 
 export const ThanksPage: FC = () => {
   return (
@@ -34,6 +35,7 @@ export const ThanksPage: FC = () => {
       </div>
       <Italics text="Estamos muy felices" green />
       <Isotype size="small" />
+      <Cta route="/invitacion" text="Volver" />
     </section>
   );
 };

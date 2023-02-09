@@ -13,3 +13,4 @@ export { default as bordes } from "./corazon_lineas.png";
 export { default as heart } from "./heart.svg";
 export { default as leftLike } from "./left-like.svg";
 export { default as rightLike } from "./right-like.svg";
+export { default as locationButton } from "./location-button.svg";

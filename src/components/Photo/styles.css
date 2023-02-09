@@ -6,12 +6,24 @@
   width: 300px;
   height: auto;
   aspect-ratio: 1/1;
-  filter: drop-shadow(0 0 10px #CD986E);
 }
 
 .photo .border {
   position: absolute;
   z-index: 2;
+  animation: pulse-heart 2s infinite;
+}
+
+@keyframes pulse-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 320px) {

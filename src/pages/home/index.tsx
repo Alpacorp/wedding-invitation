@@ -32,19 +32,19 @@ export const HomePage: FC = () => {
         <CardInfo
           title="Ceremonia"
           description="Parroquia San Joaquín de las Ferias"
-          link="https://goo.gl/maps/8Z9X7Z8Z9Z9Z9Z9Z9"
+          link="https://maps.app.goo.gl/EH7cfh8jVgpwHYJZ9"
           src={church}
           hour={"5:00 PM"}
-          location="Cra. 69K # 75 - 91"
+          location="Carrera 69K # 75 - 91"
           division
         />
         <CardInfo
           title="Recepción"
-          description="Centro de eventos El Salón Rojo"
-          link="https://goo.gl/maps/8Z9X7Z8Z9Z9Z9Z9Z9"
+          description="Recepciones Leidy"
+          link="https://maps.app.goo.gl/eG8Dx3bAPxWvhEom7"
           src={cups}
           hour={"7:00 PM"}
-          location="Cll 34 # 43 - 45"
+          location="Calle 72A # 72 - 23"
           division
         />
         <CardInfo title="Traje Formal" src={dress} division>
@@ -63,6 +63,9 @@ export const HomePage: FC = () => {
       <Italics text="Te esperamos" />
       <div className="confirm">
         <Cta route="/gracias" text="Confirmar asistencia" />
+      </div>
+      <div className="confirm">
+        <Cta route="/" text="Volver" />
       </div>
     </section>
   );
