@@ -10,3 +10,6 @@ export { default as cups } from "./copas.svg";
 export { default as mail } from "./sobre.svg";
 export { default as dress } from "./traje.svg";
 export { default as bordes } from "./corazon_lineas.png";
+export { default as heart } from "./heart.svg";
+export { default as leftLike } from "./left-like.svg";
+export { default as rightLike } from "./right-like.svg";
