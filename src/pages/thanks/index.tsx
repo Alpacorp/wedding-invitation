@@ -24,12 +24,14 @@ export const ThanksPage: FC = () => {
           <Image src={rightLike} alt="like right" />
         </div>
       </div>
-      <Text
-        title={
-          "Gracias por confirmar tu asistencia en este día para tan importante para nosotros"
-        }
-        green
-      />
+      <div className="message">
+        <Text
+          title={
+            "Gracias por confirmar tu asistencia en este día para tan importante para nosotros"
+          }
+          green
+        />
+      </div>
       <Italics text="Estamos muy felices" green />
       <Isotype size="small" />
     </section>

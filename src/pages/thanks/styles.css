@@ -1,7 +1,7 @@
 .thanks {
   background-image: url("../../assets/imgs/bg-intro.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
   background-size: cover;
 }
 
@@ -37,4 +37,9 @@
 .thanks .images .likes {
   display: flex;
   justify-content: space-around;
+}
+
+.thanks .message h2 {
+  font-size: 15px;
+  margin: 15px 0 0 0;
 }
