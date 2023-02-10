@@ -43,7 +43,7 @@ export const HomePage: FC = () => {
           description="Recepciones Leidy"
           link="https://maps.app.goo.gl/eG8Dx3bAPxWvhEom7"
           src={cups}
-          hour={"7:00 PM"}
+          hour={"6:30 PM"}
           location="Calle 72A # 72 - 23"
           division
         />
