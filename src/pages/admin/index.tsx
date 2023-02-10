@@ -65,8 +65,8 @@ export const Admin = () => {
               name="guests"
               id="guests"
               type="text"
-              placeholder="Información de invitados"
-              aria-label="Información de invitados"
+              placeholder="Nombres de los invitados"
+              aria-label="Nombre de los invitados"
               onChange={handleInputChange}
               value={transformText(guests)}
               required

@@ -42,7 +42,6 @@
 .card-info .location {
   font-size: 15px;
   margin-left: 5px;
-  /* color: #fff; */
 }
 
 .card-info .icon {
@@ -59,7 +58,7 @@
 
 .card-info .button-location {
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 100px;
   height: 25px;
   transition: all 0.2s ease-in-out;

@@ -1,4 +1,5 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
+import JSConfetti from "js-confetti";
 
 import { Text } from "../../components/Text";
 
@@ -13,6 +14,14 @@ import { heart, leftLike, rightLike } from "../../assets/imgs";
 import { Cta } from "../../components/Cta";
 
 export const ThanksPage: FC = () => {
+  const jsConfetti = new JSConfetti();
+
+  useEffect(() => {
+    jsConfetti.addConfetti({
+      emojis: ["❤️"],
+    });
+  }, []);
+
   return (
     <section className="container thanks">
       <Guests />
@@ -28,7 +37,7 @@ export const ThanksPage: FC = () => {
       <div className="message">
         <Text
           title={
-            "Gracias por confirmar tu asistencia en este día para tan importante para nosotros"
+            "Gracias por confirmar tu asistencia en este día tan importante para nosotros"
           }
           green
         />

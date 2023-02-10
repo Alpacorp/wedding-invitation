@@ -19,7 +19,7 @@ export const IntroPage: FC = () => {
       <Guests />
       <VideoIntro />
       <Isotype size="small" />
-      <Cta route="/invitacion" text="Continuar" />
+      <Cta route="/invitacion" text="Quiero ir" />
     </section>
   );
 };
