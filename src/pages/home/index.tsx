@@ -1,4 +1,8 @@
-import { FC } from "react";
+import { FC, useContext, useEffect, useState } from "react";
+
+import { apiConfirm } from "../../apis/confirm";
+
+import DataContext from "../../context/dataContext";
 
 import { Isotype } from "../../components/Isotype";
 import { Guests } from "../../components/Guests";
@@ -15,6 +19,60 @@ import "./styles.css";
 import "../pages-styles.css";
 
 export const HomePage: FC = () => {
+  const { data } = useContext(DataContext);
+  const [showInvitation, setShowInvitation] = useState(true);
+
+  const checkConfirm = () => {
+    const inv = localStorage.getItem("inv");
+    if (inv === "true") {
+      setShowInvitation(false);
+    } else {
+      setShowInvitation(true);
+    }
+  };
+
+  useEffect(() => {
+    checkConfirm();
+  }, []);
+
+  const handleConfirm = () => {
+    if (data.inv === "default") {
+      return;
+    }
+
+    if (
+      data.inv !== "default" ||
+      data.inv !== "" ||
+      data.inv !== undefined ||
+      data.inv !== null
+    ) {
+      apiConfirm
+        .post(
+          "/confirm",
+          {
+            inv: data.inv,
+            guests: data.guests,
+            quantity: data.quantity,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((response) => {
+          if (response.data.ok) {
+            localStorage.setItem("inv", "true");
+          }
+        })
+        .catch((error) => {
+          console.log("error", error);
+        });
+    } else {
+      console.log("Valor por default");
+    }
+  };
+
   return (
     <section className="home">
       <div className="header-page">
@@ -60,10 +118,17 @@ export const HomePage: FC = () => {
         </CardInfo>
         <CardInfo title="Lluvia de Sobres" src={mail} />
       </div>
-      <Italics text="Te esperamos" />
-      <div className="confirm">
-        <Cta route="/gracias" text="Confirmar asistencia" />
-      </div>
+      {showInvitation ? (
+        <div className="confirm">
+          <Cta
+            route="/gracias"
+            text="Confirmar asistencia"
+            action={handleConfirm}
+          />
+        </div>
+      ) : (
+        <Italics text="Te esperamos" />
+      )}
       <div className="confirm">
         <Cta route="/" text="Volver" />
       </div>

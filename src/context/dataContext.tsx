@@ -7,13 +7,16 @@ interface DataContextProps {
 const DataContext = createContext({
   data: {} as any,
   setData: (data: any) => {},
+  allData: {} as any,
+  setAllData: (data: any) => {},
 });
 
 export const DataContextProvider = ({ children }: DataContextProps) => {
   const [data, setData] = useState({});
+  const [allData, setAllData] = useState({});
 
   return (
-    <DataContext.Provider value={{ data, setData }}>
+    <DataContext.Provider value={{ data, setData, allData, setAllData }}>
       {children}
     </DataContext.Provider>
   );

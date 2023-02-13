@@ -21,6 +21,7 @@ export const Guests: FC<NamesProps> = ({ showText, greetingText, light }) => {
   const { data, setData } = useContext(DataContext);
 
   const location: Location = useLocation();
+  const inv: string | null = new URLSearchParams(location.search).get("inv");
   const guests: string | null = new URLSearchParams(location.search).get(
     "guests"
   );
@@ -29,8 +30,9 @@ export const Guests: FC<NamesProps> = ({ showText, greetingText, light }) => {
   );
 
   const validateUrlData = () => {
-    if (guests && quantity) {
+    if (inv && guests && quantity) {
       setData({
+        inv,
         guests,
         quantity,
       });
@@ -40,6 +42,7 @@ export const Guests: FC<NamesProps> = ({ showText, greetingText, light }) => {
   const validateDataContext = () => {
     if (Object.keys(data).length === 0) {
       setData({
+        inv: "default",
         guests: "Te invitamos a nuestra boda",
         quantity: 1,
       });
