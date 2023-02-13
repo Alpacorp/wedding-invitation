@@ -18,7 +18,7 @@
 }
 
 .card-info .requirements {
-  margin: 5px auto;
+  margin: 10px auto;
 }
 
 .card-info .header, .card-info .loc {
@@ -34,7 +34,7 @@
 }
 
 .card-info .hour {
-  font-size: 15px;
+  font-size: 18px;
   margin-right: 5px;
   font-weight: bold;
 }
