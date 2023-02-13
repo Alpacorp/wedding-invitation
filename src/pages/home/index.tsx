@@ -11,7 +11,6 @@ import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { CardInfo } from "../../components/CardInfo";
 import { Cta } from "../../components/Cta/index";
-import { Italics } from "../../components/Italics";
 
 import { church, cups, date, dress, mail } from "../../assets/imgs";
 
@@ -83,7 +82,7 @@ export const HomePage: FC = () => {
       </div>
       <Photo />
       <div className="schedule">
-        <Text title={"Agéndate este día"} />
+        <Text title={showInvitation ? "Agéndate este día" : "Te esperamos"} />
         <Image src={date} alt="Fecha del matrimonio" />
       </div>
       <div className="cards">
@@ -127,7 +126,7 @@ export const HomePage: FC = () => {
           />
         </div>
       ) : (
-        <Italics text="Te esperamos" />
+        ""
       )}
       <div className="confirm">
         <Cta route="/" text="Volver" />

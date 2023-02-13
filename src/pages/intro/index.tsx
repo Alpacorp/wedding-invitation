@@ -1,4 +1,4 @@
-import { FC, useEffect, useContext } from "react";
+import { FC, useEffect, useContext, useState } from "react";
 
 import DataContext from "../../context/dataContext";
 import { apiConfirm } from "../../apis/confirm";
@@ -14,6 +14,7 @@ import "../pages-styles.css";
 
 export const IntroPage: FC = () => {
   const { data, allData, setAllData } = useContext(DataContext);
+  const [message, setMessage] = useState<boolean>(false);
 
   const getAllData = () => {
     apiConfirm.get("/confirm").then((res) => {
@@ -28,6 +29,7 @@ export const IntroPage: FC = () => {
 
     if (inv) {
       localStorage.setItem("inv", "true");
+      setMessage(true);
     } else {
       localStorage.setItem("inv", "false");
     }
@@ -50,7 +52,10 @@ export const IntroPage: FC = () => {
       <Guests />
       <VideoIntro />
       <Isotype size="small" />
-      <Cta route="/invitacion" text="Quiero ir" />
+      <Cta
+        route="/invitacion"
+        text={message ? "Ver Invitación" : "Quiero ir"}
+      />
     </section>
   );
 };

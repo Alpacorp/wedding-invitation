@@ -28,15 +28,16 @@ export const Admin = () => {
   };
 
   const [formValues, handleInputChange, reset] = useForm({
+    inv: "",
     guests: "",
     quantity: "",
   });
 
-  const { guests, quantity } = formValues;
+  const { inv, guests, quantity } = formValues;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setUrl(`${baseUrl}?guests=${guests}&quantity=${quantity}`);
+    setUrl(`${baseUrl}?inv=${inv}&guests=${guests}&quantity=${quantity}`);
     reset();
   };
 
@@ -61,6 +62,16 @@ export const Admin = () => {
         <hr />
         <form onSubmit={handleSubmit}>
           <div className="inputs">
+            <input
+              name="inv"
+              id="inv"
+              type="number"
+              placeholder="Id de la invitación"
+              aria-label="Id de la invitación"
+              onChange={handleInputChange}
+              value={inv}
+              required
+            />
             <input
               name="guests"
               id="guests"
