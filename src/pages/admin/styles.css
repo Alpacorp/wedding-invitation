@@ -1,5 +1,6 @@
 .admin {
   background-color: #40615A;
+  padding: 50px 0;
 }
 
 .admin h2 {
@@ -99,4 +100,19 @@
 
 .admin .result a:hover {
   color: #dad6d6;
+}
+
+.quantity-guests {
+  text-decoration: underline;
+}
+
+.detail-guests {
+  text-decoration: underline;
+  text-align: left;
+}
+
+.admin .line {
+  width: 30%;
+  height: 1px;
+  background-color: #CD986E;
 }

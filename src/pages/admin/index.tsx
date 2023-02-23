@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { transformText } from "../../utils/transformText";
 
+import { apiConfirm } from "../../apis/confirm";
+
 import "./styles.css";
 import "../pages-styles.css";
 
@@ -14,6 +16,7 @@ export const Admin = () => {
 
   const [url, setUrl] = useState<string>("");
   const [baseUrl, setBaseUrl] = useState<string>("");
+  const [guestsList, setGuestsList] = useState<string[]>([]);
 
   const validateEnv = (): void => {
     if (environment === "development") {
@@ -41,12 +44,18 @@ export const Admin = () => {
     reset();
   };
 
+  const handleViewGuests = async () => {
+    const { data } = await apiConfirm.get("/guests");
+    setGuestsList(data.guests);
+  };
+
   useEffect(() => {
     validateEnv();
+    handleViewGuests();
   }, []);
 
   return (
-    <section className="container admin">
+    <section className="admin">
       <div className="admin-form">
         <h2>Formulario de registro de invitados</h2>
         <hr />
@@ -118,6 +127,48 @@ export const Admin = () => {
             {url}
           </Link>
         )}
+      </div>
+      <div>
+        <h2>Lista de invitados</h2>
+        <hr />
+        <p>
+          Aquí podrás ver la lista de invitados registrados en la base de datos
+          y que a este momento han confirmado tu invitación.
+        </p>
+        <p>
+          <strong>Nota:</strong> Si no ves la lista de invitados, recarga la
+          página o espera unos segundos.
+        </p>
+        <br />
+        {guestsList && (
+          <p>
+            <strong>Total de invitados confirmados: </strong>
+            <span className="quantity-guests">{guestsList.length}</span>
+          </p>
+        )}
+        <hr />
+        <p>
+          <strong className="detail-guests">Detalle de los invitados</strong>
+        </p>
+        <br />
+        {guestsList &&
+          guestsList.map((guest: any) => (
+            <div className="guest" key={guest._id}>
+              <p>
+                <strong>Id: </strong>
+                {guest.inv}
+              </p>
+              <p>
+                <strong>Invitados: </strong>
+                {guest.guests}
+              </p>
+              <p>
+                <strong>Cantidad: </strong>
+                {guest.quantity}
+              </p>
+              <hr className="line" />
+            </div>
+          ))}
       </div>
     </section>
   );
