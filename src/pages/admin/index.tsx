@@ -45,8 +45,10 @@ export const Admin = () => {
   };
 
   const handleViewGuests = async () => {
-    const { data } = await apiConfirm.get("/guests");
-    setGuestsList(data.guests);
+    await apiConfirm
+      .get("/guests")
+      .then((res) => setGuestsList(res.data.guests))
+      .catch((err) => err);
   };
 
   useEffect(() => {
