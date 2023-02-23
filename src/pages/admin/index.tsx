@@ -38,6 +38,12 @@ export const Admin = () => {
 
   const { inv, guests, quantity } = formValues;
 
+  const sumQuantity = (guests: any) => {
+    return guests.reduce((acc: any, guest: any) => {
+      return acc + guest.quantity;
+    }, 0);
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setUrl(`${baseUrl}?inv=${inv}&guests=${guests}&quantity=${quantity}`);
@@ -143,10 +149,16 @@ export const Admin = () => {
         </p>
         <br />
         {guestsList && (
-          <p>
-            <strong>Total de invitados confirmados: </strong>
-            <span className="quantity-guests">{guestsList.length}</span>
-          </p>
+          <div>
+            <p>
+              <strong>Invitados confirmados: </strong>
+              <span className="quantity-guests">{guestsList.length}</span>
+            </p>
+            <p>
+              <strong>Total de invitados: </strong>
+              <span className="quantity-guests">{sumQuantity(guestsList)}</span>
+            </p>
+          </div>
         )}
         <hr />
         <p>
